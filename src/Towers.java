@@ -113,7 +113,7 @@ public class	Towers {
 		List<String>	tmpA = new ArrayList<>(towerA),
 						tmpB = new ArrayList<>(towerB),
 						tmpC = new ArrayList<>(towerC);
-		int				towerWidth = size * 2 + 3, topDeck = Math.max(tmpA.size(), tmpB.size());
+		int				towerWidth = Math.max(9, size * 2 + 3), topDeck = Math.max(tmpA.size(), tmpB.size());
 		
 		topDeck = Math.max(topDeck, tmpC.size());
 		System.out.println("step: " + steps + '\n');

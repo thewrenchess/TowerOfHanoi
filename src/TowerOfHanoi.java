@@ -2,10 +2,11 @@
  * @author thewrenchess
  */
 
+
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class	Controller {
+public class	TowerOfHanoi {
 	private int			size = 0;
 	private Game		game = new Game();
 	private Scanner		scan = new Scanner(System.in);
@@ -45,17 +46,18 @@ public class	Controller {
 	}
 	
 	public static void	main(String[] args) throws InterruptedException {
-		Controller	c = new Controller();
-		int			loop = 1, result;
+		TowerOfHanoi	c = new TowerOfHanoi();
+		int				loop = 1, result;
 
 		System.out.println("Welcome to the Towers of Hanoi game.\n");
 		TimeUnit.SECONDS.sleep(1);
-		System.out.println("The goal of this game is to move the entire stack of disks from tower A to tower C.\n");
+		c.game.printrules();
+		System.out.println("\n");
 		TimeUnit.SECONDS.sleep(1);
 		while (loop == 1) {
 			result = c.mainMenu();
 			if (result == 0) {
-				TimeUnit.SECONDS.sleep(1);
+				System.out.println();
 				System.out.println("Thank you for playing Tower of Hanoi.\nExiting...");
 				return ;
 			}

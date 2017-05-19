@@ -10,7 +10,7 @@ public class Game {
 	private Towers	towers;
 	private Scanner	scan = new Scanner(System.in);
 	
-	private void	printrules() {
+	public void		printrules() {
 		System.out.println("\n\nGoal:");
 		System.out.println("-You goal is to move the entire stack of disks from tower A to tower C.\n");
 		System.out.println("\nRules:");
@@ -82,9 +82,6 @@ public class Game {
 	}
 	
 	private void	solveEven() throws InterruptedException {
-		if (towers.towerA.size() == 0 && towers.towerB.size() == 0)
-			return ;
-		
 		towers.moveBetweenAAndB();
 		towers.printTowers();
 		System.out.println();
@@ -151,13 +148,7 @@ public class Game {
 		
 		System.out.println("Settint up new Towers...");
 		TimeUnit.SECONDS.sleep(1);
-		while (loop > 0) {
-			if (loop < 2) {
-				TimeUnit.SECONDS.sleep(1);
-				printrules();
-				TimeUnit.SECONDS.sleep(1);
-				loop++;
-			}
+		while (loop == 1) {
 			System.out.println();
 			towers.printTowers();
 			System.out.println();
@@ -166,7 +157,9 @@ public class Game {
 				System.out.println("Settint up new Towers...");
 				towers = new Towers(size);
 			} else if (choice == -2) {
-				loop--;
+				printrules();
+				System.out.println("\n");
+				TimeUnit.SECONDS.sleep(2);
 			} else if (choice == 1) {
 				towers.moveBetweenAAndB();
 			} else if (choice == 2) {
