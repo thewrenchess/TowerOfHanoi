@@ -116,7 +116,7 @@ public class	Towers {
 		int				towerWidth = Math.max(9, size * 2 + 3), topDeck = Math.max(tmpA.size(), tmpB.size());
 		
 		topDeck = Math.max(topDeck, tmpC.size());
-		System.out.println("step: " + steps + '\n');
+		System.out.println("STEP: " + steps + '\n');
 		while (topDeck > 0) {
 			if (topDeck == tmpA.size()) {
 				printTower(tmpA, towerWidth);
