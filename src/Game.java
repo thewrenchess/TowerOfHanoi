@@ -26,41 +26,41 @@ public class Game {
 			System.out.println("\nWhat would you like to do next?");
 			int i = 1;
 			if (towers.towerA.size() == 0) {
-				System.out.println("(" + i + ")Move disk from B to A");
+				System.out.println("(" + i + ") Move disk from B to A");
 				i++;
 			} else if (towers.towerB.size() == 0) {
-				System.out.println("(" + i + ")Move disk from A to B");
+				System.out.println("(" + i + ") Move disk from A to B");
 				i++;
 			} else if (towers.towerA.get(towers.towerA.size() - 1).length() > towers.towerB.get(towers.towerB.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from B to A");
+				System.out.println("(" + i + ") Move disk from B to A");
 				i++;
 			} else if (towers.towerA.get(towers.towerA.size() - 1).length() < towers.towerB.get(towers.towerB.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from A to B");
+				System.out.println("(" + i + ") Move disk from A to B");
 				i++;
 			}
 			if (towers.towerA.size() == 0 && towers.towerC.size() == 0) {
 			} else if (towers.towerA.size() == 0 && towers.towerC.size() != 0) {
-				System.out.println("(" + i + ")Move disk from C to A");
+				System.out.println("(" + i + ") Move disk from C to A");
 				i++;
 			} else if (towers.towerC.size() == 0 && towers.towerA.size() != 0) {
-				System.out.println("(" + i + ")Move disk from A to C");
+				System.out.println("(" + i + ") Move disk from A to C");
 				i++;
 			} else if (towers.towerA.get(towers.towerA.size() - 1).length() > towers.towerC.get(towers.towerC.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from C to A");
+				System.out.println("(" + i + ") Move disk from C to A");
 				i++;
 			} else if (towers.towerA.get(towers.towerA.size() - 1).length() < towers.towerC.get(towers.towerC.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from A to C");
+				System.out.println("(" + i + ") Move disk from A to C");
 				i++;
 			}
 			if (towers.towerB.size() == 0 && towers.towerC.size() == 0) {
 			} else if (towers.towerB.size() == 0 && towers.towerC.size() != 0) {
-				System.out.println("(" + i + ")Move disk from C to B");
+				System.out.println("(" + i + ") Move disk from C to B");
 			} else if (towers.towerC.size() == 0 && towers.towerB.size() != 0) {
-				System.out.println("(" + i + ")Move disk from B to C");
+				System.out.println("(" + i + ") Move disk from B to C");
 			} else if (towers.towerB.get(towers.towerB.size() - 1).length() > towers.towerC.get(towers.towerC.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from C to B");
+				System.out.println("(" + i + ") Move disk from C to B");
 			} else if (towers.towerB.get(towers.towerB.size() - 1).length() < towers.towerC.get(towers.towerC.size() - 1).length()) {
-				System.out.println("(" + i + ")Move disk from B to C");
+				System.out.println("(" + i + ") Move disk from B to C");
 			}
 			System.out.println("Enter the integer representing move, 'rules' to see rules, 'restart' to restart the game, 'exit' to exit");
 			String	input = scan.nextLine();
@@ -76,6 +76,8 @@ public class Game {
 				System.out.println("\n--------------------------------------------");
 				System.out.println("Please enter an 1, 2, 3, 'exit' or 'restart'");
 				System.out.println("--------------------------------------------\n");
+				towers.printTowers();
+				System.out.println();
 			}
 		}
 		return choice;
