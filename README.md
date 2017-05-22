@@ -10,10 +10,11 @@ Tower of Hanoi is a game and a solver to the classic Tower of Hanoi puzzle
   3. No disk may be placed on top of a smaller disk.
 
 ## Installation
-Download the entire repository to your local folder
+- Download the entire repository to your local folder
+- `make`
 
 ## USAGE
-`sh TowerOfHanoi.sh`
+`make run`
 
 ## Note
 - Since the shortest solution of `n` disks is 2 ^ n - 1, it would be wise to limit your input to within 6 to avoid a really long game.
